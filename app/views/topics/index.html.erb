@@ -1,0 +1,12 @@
+<h1>New Resolution</h1>
+<h2>Create Read Update Destroy</h2>
+<ul>
+<% @topics.each do |topic| %>
+  <li>
+    <%= topic.resolution %>
+    <%= topic.vote %>
+    <%#= link_to "Vote", :controller => :topics_controller, :method => :post %>
+    <%= link_to "Vote", upvote_topic_path(topic), :method => :post %>
+  </li>
+<% end %>
+</ul>
