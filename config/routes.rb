@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     member do
       post 'upvote'
     end
+   member do
+      post 'downvote'
+    end
   end
 
   # Example resource route with options:

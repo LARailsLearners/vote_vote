@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+a {
+  text-decoration: underline !important;
+}
+.label {
+  color:#eee !important;
+}
+
+ul li {
+  padding:10px 0;
+
+}
+
+.btn {
+  background: orange !important;
+  color:#fff !important;
+}

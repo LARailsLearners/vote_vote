@@ -1,5 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+    <br>
+    <br>
+    <br>
+    <h1>Enter your resolution below:</h1>
+    <br>
 <%= form_for(@topic) do |f| %>
-  <%= f.label :resolution %>
+  <%= f.label "Enter resolution" %>
   <%= f.text_field :resolution %>
   <%= f.submit "Submit" %>
 <% end %>
+      
+    </div>
+  </div>
+</div>
