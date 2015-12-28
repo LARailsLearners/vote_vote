@@ -3,12 +3,29 @@
 <head>
   <title>VoteVote</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%=stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js' %>
+  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!---alerts-->
+    <% if flash[:error] || flash[:notice] %>
+      <% if flash[:error] %>
+        <div class="alert alert-danger" role="alert">
+          <%=flash[:error]  %>
+        </div>
+      <% else %>
+        <div class="alert alert-success" role="alert">
+          <%=flash[:notice]  %>
+        </div>
+      <% end %>
+      <% end %>
 
-<%= yield %>
+  <!--/end alerts-->
+
+  <%= yield %>
 
 </body>
 </html>

@@ -26,7 +26,22 @@ class TopicsController < ApplicationController
     @topic.vote += 1
     @topic.save
     redirect_to root_path
+    flash[:notice] = "Vote Added"
   end
+
+  def downvote
+    @topic= Topic.find(params[:id])
+    if @topic.vote == nil
+
+      @topic.vote = 0
+
+    end
+    @topic.vote -= 1
+    @topic.save
+    redirect_to root_path
+    flash[:notice] = "Vote Subtracted"
+  end
+
 
   private
 
